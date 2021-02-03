@@ -35,3 +35,6 @@ the result is `gcc $CFILE -o cisfun`.
 
 5. A C program that prints `with proper grammar, but the outcome is a piece of art,`
 [Source](https://www.programiz.com/c-programming/examples/print-sentence).
+
+6.C program that prints the size of various types on the computer it is compiled and run on.
+[Source](https://www.programiz.com/c-programming/examples/sizeof-operator-example).
