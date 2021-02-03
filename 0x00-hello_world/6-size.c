@@ -17,7 +17,7 @@ float flt;
 printf("Size of a char: %lu bytes(s)\n", sizeof(chr));
 printf("Size of an int: %lu bytes(s)\n", sizeof(tni));
 printf("Size of a long int: %lu bytes(s)\n", sizeof(li));
-printf("Size of a long long init: %lu bytes(s)\n", sizeof(lli));
+printf("Size of a long long int: %lu bytes(s)\n", sizeof(lli));
 printf("Size of a float: %lu bytes(s)\n", sizeof(flt));
 
 return (0);
