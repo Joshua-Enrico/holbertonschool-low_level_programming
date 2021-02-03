@@ -30,3 +30,24 @@ The C file name will be saved in the variable $CFILE
 Following this [Source](https://www.cyberciti.biz/faq/compiling-c-program-and-creating-executable-file/) the syntax will be `gcc "file" -o "executable file"`
 
 the result is `gcc $CFILE -o cisfun`.
+
+4.Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+
+Use the function puts
+You are not allowed to use printf
+Your program should end with the value 0
+
+result:
+#include <stdio.h>
+/**
+ *main - Prints a specified string
+ *Description: This function will print the string "Programming is like
+ *building a multilingual puzzle using the puts function.
+ *Return: 0 if the programming ran to completion
+ */
+int main(void)
+{
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
+}
+.
