@@ -33,3 +33,5 @@ the result is `gcc $CFILE -o cisfun`.
 
 4.C program that prints `"Programming is like building a multilingual puzzle`using `puts`.
 
+5. A C program that prints `with proper grammar, but the outcome is a piece of art,`
+[Source](https://www.programiz.com/c-programming/examples/print-sentence).
