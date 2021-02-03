@@ -14,11 +14,11 @@ long int li;
 long long int lli;
 float flt;
 
-printf("Size of char: %lu bytes\n", sizeof(chr));
-printf("Size of int: %lu bytes\n", sizeof(tni));
-printf("Size of long int: %lu bytes\n", sizeof(li));
-printf("Size of long long init: %lu bytes\n", sizeof(lli));
-printf("Size of float: %lu bytes\n", sizeof(flt));
+printf("Size of char: %lu bytes(s)\n", sizeof(chr));
+printf("Size of int: %lu bytes(s)\n", sizeof(tni));
+printf("Size of long int: %lu bytes(s)\n", sizeof(li));
+printf("Size of long long init: %lu bytes(s)\n", sizeof(lli));
+printf("Size of float: %lu bytes(s)\n", sizeof(flt));
 
 return (0);
 }
