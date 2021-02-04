@@ -23,3 +23,11 @@ You can only use the putchar function (every other function (printf, puts, etcâ€
 All your code should be in the main function
 You can only use putchar three times in your code
 using this [Source](https://www.tutorialspoint.com/c_standard_library/c_function_putchar.htm)
+
+4.Write a program that prints the alphabet in lowercase, followed by a new line.
+
+Print all the letters except q and e
+You can only use the putchar function (every other function (printf, puts, etcâ€¦) is forbidden)
+All your code should be in the main function
+You can only use putchar twice in your code
+here i did use `if` statement to avoid letter q and e.
