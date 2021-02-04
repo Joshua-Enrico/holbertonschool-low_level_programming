@@ -38,3 +38,10 @@ the result is `gcc $CFILE -o cisfun`.
 
 6.C program that prints the size of various types on the computer it is compiled and run on.
 [Source](https://www.programiz.com/c-programming/examples/sizeof-operator-example).
+
+
+8.[Source](https://stackoverflow.com/questions/199966/how-do-you-use-gcc-to-generate-assembly-code-in-intel-syntax).
+
+9.C program that prints exactly and that piece of art is useful" - 
+Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
+[Source](https://www.quora.com/How-can-we-print-the-Hello-world-without-printf),[Source](https://bytefreaks.net/programming-2/c-programming-2/c-implicit-declaration-of-function-read-and-write).
