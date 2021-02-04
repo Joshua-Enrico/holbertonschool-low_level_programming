@@ -1,27 +1,27 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /**
- * main - Random number to varaible
+ *main - Entry point
  *
- *Description : This function will assing a random number
- *to the variable n
- *Return: 0
+ *Description: This program will take a random number and display whether it is
+ *positive, negative, or zero.
+ *Return: Returns 0.
  */
 int main(void)
 {
-int n;
+	int n;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
 if (n > 0)
-printf("%d is positive \n", n);
+printf("%d is positive", n);
 else if (n < 0)
-printf("%d is negative \n", n);
+printf("%d is negative", n);
 else
-printf("%d is zero \n", n);
+printf("%d is zero", n);
 
-
-return (0);
+	putchar('\n');
+	return (0);
 }
