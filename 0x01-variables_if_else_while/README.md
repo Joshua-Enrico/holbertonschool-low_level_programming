@@ -67,3 +67,12 @@ You can only use the putchar function (every other function (printf, puts, etcâ€
 All your code should be in the main function
 You can only use putchar four times maximum in your code
 You are not allowed to use any variable of type char,[Source](https://www.programiz.com/c-programming/c-break-continue-statement).
+
+10 .Write a program that prints the numbers from 00 to 99.
+
+Numbers must be separated by ,, followed by a space
+Numbers should be printed in ascending order, with two digits
+You can only use the putchar function (every other function (printf, puts, etcâ€¦) is forbidden)
+You can only use putchar five times maximum in your code
+You are not allowed to use any variable of type char
+All your code should be in the main function
