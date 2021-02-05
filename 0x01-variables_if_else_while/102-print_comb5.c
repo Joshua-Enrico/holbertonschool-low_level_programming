@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
   * main - Prints 3 combination of numbers
   *
@@ -7,40 +6,25 @@
   */
 int main(void)
 {
-	int c, i, k, j;
+	int n1;
+	int n2;
 
-	for (c = 48; c <= 57; c++)
+	for (n1 = 0; n1 < 100; n1++)
 	{
-		for (i = 48; i <= 57; i++)
+		for (n2 = n1 + 1; n2 < 100; n2++)
 		{
-			for (k = 48; k <= 57; k++)
+			putchar((n1 / 10) + '0');
+			putchar((n1 % 10) + '0');
+			putchar(' ');
+			putchar((n2 / 10) + '0');
+			putchar((n2 % 10) + '0');
+			if (n1 != 98 || n2 != 99)
 			{
-				for (j = 48; j <= 57; j++)
-				{
-					if (((k + j) > (c + i) &&  k >= c) || c < k)
-					{
-						putchar(c);
-						putchar(i);
-						putchar(' ');
-						putchar(k);
-						putchar(j);
-
-					if (c + i + k + j == 227 && c == 57)
-					{
-					break;
-					}
-					else
-					{
-					putchar(',');
-					putchar(' ');
-					}
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
