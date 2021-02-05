@@ -23,12 +23,11 @@ putchar(b);
 putchar(' ');
 putchar(c);
 putchar(d);
-if (a + b + c + d  == 36)
+if (!(a == 9 && b == 8))
 {
-break;
-}
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
