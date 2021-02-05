@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  * main - Prints 3 combination of numbers
+  * main - Prints 4 combination of numbers
   *
   * Return: Always (Success)
   */
@@ -23,12 +23,9 @@ putchar(b);
 putchar(' ');
 putchar(c);
 putchar(d);
-if ((a + c + d == 23 ) && (b == 8))
+if (((a != 9) || (b != 8)) || ((c != 9) || (d != 9)))
 {
-break;
-}
-else
-{
+
 putchar(',');
 putchar(' ');
 }
