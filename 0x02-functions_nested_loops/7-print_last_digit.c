@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
-  *_abs - prints absolute value of an integer.
-  *@a: caracter to be computed
-  *Return: void
+  *print_last_digit - prints the last digit of a number.
+  *@a: number
+  *Return: last digit of a number
   */
 int print_last_digit(int a)
 {
