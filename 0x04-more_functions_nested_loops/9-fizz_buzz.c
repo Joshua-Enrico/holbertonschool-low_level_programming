@@ -6,26 +6,25 @@
 */
 int main(void)
 {
-int a = 1;
-while (a <= 100)
-{
-if (a % 5 == 0 && a % 3 == 0)
-{
-printf("FizzBuzz");
-}
-else if (a % 5 == 0)
-{
-printf("Buzz");
-}
-else if (a % 3 == 0)
-{
-printf("Fizz");
-}
-else
-printf("%d", a);
-printf(" ");
-a++;
-}
-printf("\n");
-return (0);
+	int i;
+
+	i = 1;
+	while (i <= 100)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", i);
+
+		if (i != 100)
+			printf(" ");
+		i++;
+	}
+	printf("\n");
+
+	return (0);
 }
