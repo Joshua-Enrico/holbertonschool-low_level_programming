@@ -24,7 +24,7 @@ printf("Fizz");
 else
 printf("%d", a);
 
-if (a !=100)
+if (a != 100)
 printf(" ");
 a++;
 }
