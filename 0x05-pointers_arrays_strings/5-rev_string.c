@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *  print_rev - Prints invert
- * description: print_rev
+ * rev_string - Prints invert
+ * description: rev_string
  *@s: pointer to s
  * Return: 0
  */
@@ -10,9 +10,9 @@ void rev_string(char *s)
 int a = 0, b = 0, save;
 
 while (s[a] != '\0')
- {
-     a++;
- }
+{
+a++;
+}
 a--;
 while (b < a)
 {
