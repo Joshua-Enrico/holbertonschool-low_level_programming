@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
- *_trñem - pritns lenght
+ *  _strlen - Pritns lenght
+ * description: _strlen
  *@s: pointer to s
- * returno: 0
+ * Return: a
  */
 int _strlen(char *s)
 {
@@ -11,9 +12,9 @@ a = 0;
 
 while (s[a] != 0)
 {
- 
- a++;
+
+a++;
 }
-    
- return (a);
+
+return (a);
 }
