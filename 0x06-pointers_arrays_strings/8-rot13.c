@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
-  * root13 - emtry point
+  * rot13 - Emtry point
+  * Desc: rot13
   * @x: The string to encode
   *
-  * Return: x
+  * Return: function that encodes using rot13
   */
 char *rot13(char *x)
 {
