@@ -13,15 +13,18 @@ while (src[b])
 {
 b++;
 }
+
 while (a < n && src[a])
 {
 dest[a] = src[a];
 a++;
 }
+
 while (a < n)
 {
-dest[a] = '\n';
+dest[a] = '\0';
 a++;
 }
+
 return (dest);
 }
