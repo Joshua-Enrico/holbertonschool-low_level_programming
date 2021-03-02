@@ -20,14 +20,14 @@ if (s2 == NULL)
 return ("");
 
 while (s1[x] != '\0')
-{
+
 x++;
-}
+
 while (s2[y] != '\0')
-{
+
 y++;
 y++;
-}
+
 f = x + y;
 
 leng = malloc(sizeof(char) * f);
