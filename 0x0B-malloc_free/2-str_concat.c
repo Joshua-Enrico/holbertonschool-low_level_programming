@@ -15,9 +15,9 @@ int x = 0, y = 0, f, m, l;
 char *leng;
 
 if (s1 == NULL)
-return ("");
+s1 = "";
 if (s2 == NULL)
-return ("");
+s2 = "";
 
 while (s1[x] != '\0')
 
