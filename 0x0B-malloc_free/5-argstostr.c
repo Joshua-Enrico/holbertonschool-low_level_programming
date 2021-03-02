@@ -23,8 +23,9 @@ for (j = 0; j < av[i][j]; j++)
 y++;
 y++;
 }
-y++;
+
 }
+y++;
 s = malloc(y *sizeof(char));
 if (s == NULL)
 return (NULL);
