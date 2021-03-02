@@ -10,23 +10,23 @@
  **/
 char *_strdup(char *str)
 {
-int i = 0, x;
-char *s;
-if (str == 0)
-return (NULL);
+	int i = 0;
+	char *j;
+	int x;
 
-while (str[i] != '\0')
-i++;
-
-s = malloc(i * sizeof(*s));
-if (s == 0)
-{
-return (NULL);
-}
-
-for (x = 0; x < i; x++)
-{
-s[x] = str[x];
-}
-return (s);
+	if (str == NULL)
+		return (NULL);
+	while (str[i] != '\0')
+		i++;
+	i++;
+	j = malloc(sizeof(char) * i);
+	if (j == NULL)
+	{
+		return (NULL);
+	}
+	for (x = 0; x < i; x++)
+	{
+		j[x] = str[x];
+	}
+	return (j);
 }
