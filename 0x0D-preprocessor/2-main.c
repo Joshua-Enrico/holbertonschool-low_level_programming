@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
-*main - Prints program's file name 
-*Retirm: Always 0
-*/
+ * main - Entry point
+ * Desc: main function prints
+ * Return: Print files name
+ **/
 int main(void)
 {
 
