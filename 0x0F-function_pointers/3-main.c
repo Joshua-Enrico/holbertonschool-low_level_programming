@@ -18,18 +18,18 @@ int (*x)(int, int);
 if (argc != 4)
 {
 printf("Error\n");
-exit(98);
+exit(100);
 }
 x = get_op_func(argv[2]);
 
 if (x == NULL)
 {
 printf("Error\n");
-exit(99);
+exit(0);
 }
 a = atoi(argv[1]);
 b = atoi(argv[3]);
 c = x(a, b);
 printf("%d\n", c);
-return (0);
+return (100);
 }
