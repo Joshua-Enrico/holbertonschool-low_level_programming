@@ -18,7 +18,7 @@ int (*x)(int, int);
 if (argc != 4)
 {
 printf("Error\n");
-exit(100);
+exit(0);
 }
 x = get_op_func(argv[2]);
 
@@ -31,5 +31,5 @@ a = atoi(argv[1]);
 b = atoi(argv[3]);
 c = x(a, b);
 printf("%d\n", c);
-return (100);
+return (0);
 }
