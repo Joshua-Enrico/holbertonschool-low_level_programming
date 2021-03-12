@@ -37,7 +37,8 @@ printf("%s", separator);
 }
 x++;
 }
+}
 va_end(string);
 printf("\n");
-}
+
 }
