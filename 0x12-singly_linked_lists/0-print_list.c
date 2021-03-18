@@ -14,6 +14,8 @@ size_t print_list(const list_t *h)
 	pointer = h; /* puntero a puntero para obtener la lista*/
 
 	/*usamos un for para obtener el numero nodos*/
+	if (h == NULL && pointer == NULL)
+	printf("[%u] %s\n", 0, "(nil)");
 	for (i = 0; pointer; i++)
 	{
 		/*procedemos a imprimir los elementos*/
