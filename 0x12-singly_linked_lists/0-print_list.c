@@ -1,3 +1,4 @@
+  
 #include "lists.h"
 #include <stdio.h>
 /**
@@ -14,7 +15,7 @@ size_t print_list(const list_t *h)
 	pointer = h; /* puntero a puntero para obtener la lista*/
 
 	/*usamos un for para obtener el numero nodos*/
-	if (h == NULL && pointer == NULL)
+	if (h == NULL && pointer->str == NULL)
 	printf("[%u] %s\n", 0, "(nil)");
 	for (i = 0; pointer; i++)
 	{
