@@ -11,11 +11,16 @@
 
 unsigned int _strlen(char *str)
 {
-	unsigned int i;
+	int i = 0;
 
-	for (i = 0; str[i]; i++)
-		;
-	return (i);
+	while (*str)
+	{
+		str++;
+		i++;
+	}
+
+return (i);
+
 }
 /**
  * add_node - adds a node to the beginning of a linked list
@@ -43,5 +48,5 @@ list_t *add_node(list_t **head, const char *str)
 	*head = new;
 	return (new);
 		}
-		return(0);
+		return (0);
 }
