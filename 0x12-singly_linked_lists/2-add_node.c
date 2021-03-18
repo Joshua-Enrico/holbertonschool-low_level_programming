@@ -29,7 +29,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
 
-	if (str == NULL && str == NULL) /*primer caso de nulo*/
+	if (str == NULL && head == NULL) /*primer caso de nulo*/
 		return (NULL);
 
 	/*definimos espacio de memoria de list_t a new*/
