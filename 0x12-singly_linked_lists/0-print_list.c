@@ -1,4 +1,4 @@
-  
+
 #include "lists.h"
 #include <stdio.h>
 /**
@@ -9,20 +9,26 @@
 
 size_t print_list(const list_t *h)
 {
-	const list_t *pointer;
-	unsigned int i; /* obtiene el numero de nodos*/
+	size_t counter = 0;
 
-	pointer = h; /* puntero a puntero para obtener la lista*/
+	/*usamos un while para obtener el numero nodosen "counter"*/
 
-	/*usamos un for para obtener el numero nodos*/
-	if (h == NULL && pointer->str == NULL)
-	printf("[%u] %s\n", 0, "(nil)");
-	for (i = 0; pointer; i++)
+	while (h != NULL)
 	{
-		/*procedemos a imprimir los elementos*/
-		/*dirigimos el pointer a cada elemento de de la estructura a imprimir*/
-		printf("[%u] %s\n", pointer->len, pointer->str);
-		pointer = pointer->next;
+		if (h->str == NULL)
+		{
+			printf("[0] (nil)\n");
+			/*procedemos a imprimir los elementos*/
+			/*dirigimos el pointer a cada elemento de de la estructura a imprimir*/
+		}
+		else
+		{
+		printf("[%u] %s\n", h->len, h->str);
+		}
+
+		counter++;
+		h = h->next;
 	}
-	return (i);/*retornamos la cantidad de nodos que se representan en i*/
+
+return (counter); /*retornamos la cantidad de nodos que se representan en i*/
 }
