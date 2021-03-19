@@ -31,25 +31,14 @@ unsigned int _strlen(char *str)
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *new = malloc(sizeof(list_t));
 
-	if (str != NULL && head != NULL) /*primer caso de nulo*/
-	{
+	if (new == NULL)
+		return (NULL);
 
-		/*definimos espacio de memoria de list_t a new*/
-		new = malloc(sizeof(list_t));
-		if (new == NULL) /*caso de nulo para new*/
-			return (NULL);
-
-		new->str = strdup(str);
-		if (new->str == NULL)
-		{
-			return (NULL);
-		}	  /*uso de strdup para "copiar"*/
-		new->len = _strlen(new->str); /*sacamos longitud de str*/
-		new->next = *head;
-		*head = new;
-		return (new);
-	}
-	return (0);
+	new->str = strdup(str);
+	new->len = _strlen(new->str);
+	new->next = *head;
+	*head = new;
+	return (new);
 }
