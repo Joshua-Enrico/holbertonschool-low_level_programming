@@ -1,16 +1,16 @@
 section .data
-msg: DB 'Hello, Holberton', 10
-msgSize EQU $ - msg
-
-global start
+    msg db "Hello, Holberton",10      ; 10 is the ASCII code for a new line (LF)
 
 section .text
-    start:
-    mov rax, 4              ; function 4
-    mov rbx, 1              ; stdout
-    mov rcx, msg            ; msg
-    mov rdx, msgSize        ; size
-    int 0x80
-    mov rax, 1              ; function 1
-    mov rbx, 0              ; code
-    int 0x80
+    global _start
+
+_start:
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, msg
+    mov rdx, 17
+    syscall
+    
+    mov rax, 60
+    mov rdi, 0
+    syscall
