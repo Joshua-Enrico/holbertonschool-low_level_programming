@@ -9,11 +9,11 @@
  * Return: Retorna la longitud del string.
  */
 
-unsigned int _strlen(char *str)
+unsigned int _strlen(const char *str)
 {
 	int i = 0;
 
-	while (*str)
+	while (s[i])
 	{
 		str++;
 		i++;
