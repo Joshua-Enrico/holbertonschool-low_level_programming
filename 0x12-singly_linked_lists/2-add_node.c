@@ -19,8 +19,7 @@ unsigned int _strlen(char *str)
 		i++;
 	}
 
-return (i);
-
+	return (i);
 }
 /**
  * add_node - adds a node to the beginning of a linked list
@@ -35,18 +34,18 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new;
 
 	if (str != NULL && head != NULL) /*primer caso de nulo*/
-		{
+	{
 
-	/*definimos espacio de memoria de list_t a new*/
-	new = malloc(sizeof(list_t));
-	if (new == NULL) /*caso de nulo para new*/
-		return (NULL);
+		/*definimos espacio de memoria de list_t a new*/
+		new = malloc(sizeof(list_t));
+		if (new == NULL) /*caso de nulo para new*/
+			return (NULL);
 
-	new->str = strdup(str); /*definimos espacio de memoria a new->new*/
-	new->len = _strlen(new->str);
-	new->next = *head;
-	*head = new;
-	return (new);
-		}
-		return (0);
+		new->str = strdup(str);		  /*uso de strdup para "copiar"*/
+		new->len = _strlen(new->str); /*sacamos longitud de str*/
+		new->next = *head;
+		*head = new;
+		return (new);
+	}
+	return (0);
 }
