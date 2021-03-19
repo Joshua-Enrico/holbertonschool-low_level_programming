@@ -2,6 +2,27 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+
+
+/**
+ * _strlen - get the string's lentgh
+ * @str: string to get lentgh of
+ * Return: string's lentgh
+ */
+unsigned int _strlen(char *str)
+{
+	int counter = 0;
+
+	while (*str)
+	{
+		str++;
+		counter++;
+	}
+	return (counter);
+}
+
+
 /**
  * add_node_end - add node at the end of a list.
  * @head: double pointer
@@ -47,19 +68,3 @@ list_t *add_node_end(list_t **head, const char *str)
 
 }
 
-/**
- * _strlen - get the string's lentgh
- * @str: string to get lentgh of
- * Return: string's lentgh
- */
-unsigned int _strlen(char *str)
-{
-	int counter = 0;
-
-	while (*str)
-	{
-		str++;
-		counter++;
-	}
-	return (counter);
-}
