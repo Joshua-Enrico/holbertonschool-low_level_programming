@@ -8,28 +8,13 @@ int sum_listint(listint_t *head)
 {
 	listint_t *tmp;
 	int sum = 0;
-	int x = 0;
 
-
-	if (head == NULL)
-	{
-		return (0);
-	}
 	tmp = malloc(sizeof(listint_t));
 	tmp = head;
-	sum = tmp->n;
-	if (tmp == NULL)
+	while (tmp != NULL)
 	{
-		return (0);
-	}
-	else
-	{
-		while (tmp != NULL)
-		{
-			sum += tmp->n;
-			tmp = tmp->next;
-			x++;
-		}
+		sum += tmp->n;
+		tmp = tmp->next;
 	}
 	return (sum);
 }

@@ -9,20 +9,25 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *node;
-	unsigned int x = 0;
+	unsigned int nodes = 0;
+	listint_t *copy;
+	unsigned int counter = 0;
 
-	node = malloc(sizeof(listint_t));
-	if (node == NULL)
-		return (NULL);
-	if (head == NULL)
-		return (NULL);
+	copy = head;
 
-	node = head;
-	while (x < index)
+	while (copy != NULL)
 	{
-		node = node->next;
-		x++;
+		nodes++;
+		copy = copy->next;
 	}
-	return (node);
+	copy = head;
+	if (index > nodes - 1)
+		return (NULL);
+
+	while (counter != index)
+	{
+		counter++;
+		copy = copy->next;
+	}
+	return (copy);
 }
