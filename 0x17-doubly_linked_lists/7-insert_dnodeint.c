@@ -37,7 +37,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	tmp = *h;
 	if (idx > num_nodes - 1)
 	{
-		free(new);
 		return (NULL);
 	}
 	for (counter = 0; counter < idx; counter++)
