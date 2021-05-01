@@ -19,6 +19,15 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		counter++;
 	}
 	copy = head;
+	if (index == 0)
+	{
+		return (head);
+	}
+	if (index > counter - 1)
+	{
+		printf("!Node does not exit!\n");
+		exit(1);
+	}
 	while (nodes < index)
 	{
 		copy = copy->next;
