@@ -1,3 +1,9 @@
+# 0x01. C - Variables, if, else, while
+## About
+An introductory project on:
+- arithmetic operators and how to use them
+- logical operators (boolean operators) and how to use them
+- relational operators and how to use them
 - What values are considered TRUE and FALSE in C
 - How to declare variables
 - How to affect values to variables
