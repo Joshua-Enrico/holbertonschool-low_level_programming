@@ -25,12 +25,3 @@ A follow-up project on pointers.
 **[7-leet.c](7-leet.c)** - function that encodes a string into [1337](https://intranet.hbtn.io/rltoken/HDZQ5imXboSDnMXO9P0-Tg).
 
 **[8-rot13.c](8-rot13.c)** - function that encodes a string using [rot13](https://intranet.hbtn.io/rltoken/IFaBd0QrK-h50gV7IoW9iQ).
-
-### Advanced
-**[100-print_number.c](100-print_number.c)** - function that prints an integer without:  arrays, pointers, or hard-coded special values.
-
-**[101-magic.c](101-magic.c)** - Add one line to this [code](this code), so that the program prints a[2] = 98, followed by a new line.
-
-**[102-infinite_add.c](102-infinite_add.c)** - function that adds two numbers stored as strings.
-
-**[103-print_buffer.c](103-print_buffer.c)** - function that prints a buffer with special formatting.
