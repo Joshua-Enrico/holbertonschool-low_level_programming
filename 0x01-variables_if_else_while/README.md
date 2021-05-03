@@ -1,88 +1,41 @@
-1. This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print whether the number stored in the variable n is positive or negative.[Source](https://beginnersbook.com/2015/02/c-program-to-check-whether-the-given-integer-is-positive-or-negative/)
+- What values are considered TRUE and FALSE in C
+- How to declare variables
+- How to affect values to variables
+- How to use the `if`, `if ... else` statements
+- How to print the values of variables with `printf`
+- How to use the `while` loop
+- What is the `ASCII` character set
+- The purpose of the `gcc` flags `-m32` and `-m64`
+## Requirements
+- Ubuntu 14.04
+- gcc 4.8.4
+## File Descriptions
+### Mandatory
+**[0-positive_or_negative.c](0-positive_or_negative.c)** - assigns a random number to the variable `n` each time it is executed. Prints whether the number stored in the variable `n` is positive or negative.
 
-2. This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable n. with conditions.
+**[1-last_digit.c](1-last_digit.c)** - assigns a random number to the variable `n` each time it is executed. Prints whether the last digit of the number stored in the variable `n` is greater than 5, 0, or less than 6 and not 0.
 
-The string Last digit of, followed by
-n, followed by
-the string is, followed by
-if the last digit of n is greater than 5: the string and is greater than 5
-if the last digit of n is 0: the string and is 0
-if the last digit of n is less than 6 and not 0: the string and is less than 6 and not 0
-followed by a new line, sources that have been used [Source](https://stackoverflow.com/questions/4559654/c-objective-c-read-and-get-last-digit-of-integer),[Source](https://www.freecodecamp.org/news/if-statements-in-c/,),[Source](https://codeforwin.org/2015/06/how-to-find-first-and-last-digit-of-any-number.html).
+**[2-print_alphabet.c](2-print_alphabet.c)** - prints the alphabet in lowercase, followed by a new line, using `putchar`.
 
-2. Write a program that prints the alphabet in lowercase, followed by a new line.
+**[3-print_alphabets.c](3-print_alphabets.c)** - prints the alphabet in lowercase, and then in uppercase, followed by a new line, using `putchar`.
 
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-All your code should be in the main function
-You can only use putchar twice in your code
-[Source](https://www.tutorialspoint.com/c_standard_library/c_function_putchar.htm)
+**[4-print_alphabt.c](4-print_alphabt.c)** - prints the alphabet in lowercase, followed by a new line, except the letters `q` and `e` using `putchar`.
 
-3. Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+**[5-print_numbers.c](5-print_numbers.c)** - prints all single digit numbers of base 10 starting from 0, followed by a new line.
 
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-All your code should be in the main function
-You can only use putchar three times in your code
-using this [Source](https://www.tutorialspoint.com/c_standard_library/c_function_putchar.htm)
+**[6-print_numberz.c](6-print_numberz.c)** - prints all single digit numbers of base 10 starting from 0, followed by a new line, using `putchar`, without using a variable of type `char`.
 
-4. Write a program that prints the alphabet in lowercase, followed by a new line.
+**[7-print_tebahpla.c](7-print_tebahpla.c)** - prints the lowercase alphabet in reverse, followed by a new line, using `putchar`.
 
-Print all the letters except q and e
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-All your code should be in the main function
-You can only use putchar twice in your code
-here i did use `if` statement to avoid letter q and e.
+**[8-print_base16.c](8-print_base16.c)** - prints all the numbers of base 16 in lowercase, followed by a new line, using `putchar`.
 
-5. Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+**[9-print_comb.c](9-print_comb.c)** - prints all single-digit numbers, separated by a comma, using `putchar`, without using a variable of type `char`.
 
-All your code should be in the main function
-here we use chat and putchar to list the numbers in base 10 from 0 to 9.
+**[10-print_comb2.c](10-print_comb2.c)** - prints the numbers from 00 to 99, separated by a comma, using `putchar`, without using a variable of type `char`.
 
-Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+### Advanced
+**[100-print_comb3.c](100-print_comb3.c)** - prints all possible different combinations of two digits, separated by a comma, using `putchar`, without using a variable of type `char`.
 
-6. You are not allowed to use any variable of type char
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-You can only use putchar twice in your code
-All your code should be in the main function
-here instead of `char` we use `int`. and the syntax is the same.
+**[101-print_comb4.c](101-print_comb4.c)** - prints all possible different combinations of three digits, separated by a comma, using `putchar`, without using a variable of type `char`.
 
-7 .Write a program that prints the lowercase alphabet in reverse, followed by a new line.
-
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-All your code should be in the main function
-You can only use putchar twice in your code.
-Here i have to use decrement `--` to indicate that the operation have to go
-in a decreasing way.[Source](https://www.programiz.com/c-programming/c-operators).
-
-8 .Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
-
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-All your code should be in the main function
-You can only use putchar three times in your code
-
-9 .Write a program that prints all possible combinations of single-digit numbers.
-
-Numbers must be separated by ,, followed by a space
-Numbers should be printed in ascending order
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-All your code should be in the main function
-You can only use putchar four times maximum in your code
-You are not allowed to use any variable of type char,[Source](https://www.programiz.com/c-programming/c-break-continue-statement).
-
-10 .Write a program that prints the numbers from 00 to 99.
-
-Numbers must be separated by ,, followed by a space
-Numbers should be printed in ascending order, with two digits
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-You can only use putchar five times maximum in your code
-You are not allowed to use any variable of type char
-All your code should be in the main function
-
-11 .Write a program that prints all possible different combinations of two digits.
-
-Numbers must be separated by ,, followed by a space
-The two digits must be different
-01 and 10 are considered the same combination of the two digits 0 and 1
-Print only the smallest combination of two digits
-Numbers should be printed in ascending order, with two digits
-You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-You can only use putchar five times maximum in your code
+**[102-print_comb5.c](102-print_comb5.c)** - prints all possible different combinations of two two digit numbers, separated by a comma, using `putchar`, without using a variable of type `char`.
