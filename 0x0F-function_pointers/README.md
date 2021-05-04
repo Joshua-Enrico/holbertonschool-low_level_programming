@@ -1,4 +1,4 @@
-# 0x0E. C - Function pointers
+# 0x0F. C - Function pointers
 ## About
 An introductory project on:
 - function pointers and how to use them
@@ -29,6 +29,3 @@ An introductory project on:
 - `int op_mod(int a, int b)` - returns the remainder of the division of a by b.
 
 **[3-get_op_func.c](3-get_op_func.c)** - selects the correct function from [3-op_functions.c](3-op_functions.c) to perform the operation asked by the user.
-
-### Advanced
-**[100-main_opcodes.c](100-main_opcodes.c)** - prints the opcodes of its own main function up to a specified number of bytes.
