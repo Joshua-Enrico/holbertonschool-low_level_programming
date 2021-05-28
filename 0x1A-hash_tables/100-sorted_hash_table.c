@@ -6,26 +6,26 @@
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *ht = malloc(sizeof(shash_table_t));
-	unsigned long int index = 0;
+	shash_table_t *sht;
+	unsigned long int i;
 
-	if (ht == NULL)
+	sht = malloc(sizeof(shash_table_t));
+	if (sht == NULL)
 		return (NULL);
-	ht->size = size;
-	ht->shead = NULL;
-	ht->stail = NULL;
-	ht->array = malloc(sizeof(shash_node_t) * size);
-	/* another assigment: size * sizeof (hash_node_t *) * size*/
-	if (ht->array == NULL)
+	sht->size = size;
+	sht->shead = NULL;
+	sht->stail = NULL;
+	sht->array = malloc(sizeof(shash_node_t) * size);
+	if (sht->array == NULL)
 	{
-		free(ht);
+		free(sht);
 		return (NULL);
 	}
-	for (index = 0; index < size; index++)
+	for (i = 0; i < size; i++)
 	{
-		ht->array[index] = NULL;
+		sht->array[i] = NULL;
 	}
-	return (ht);
+	return (sht);
 }
 /**
  * shash_table_set - creates a new hash node
@@ -202,12 +202,13 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *tmp;
-	char flag = 0; /* 0 before printing any data, 1 after*/
+	int flag = 0;
 
 	if (ht == NULL || ht->array == NULL)
 		return;
 	printf("{");
 	tmp = ht->stail;
+
 	while (tmp != NULL)
 	{
 		if (flag == 1)
@@ -226,25 +227,24 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	unsigned long int i;
-	shash_node_t *next;
+	shash_node_t *tmp;
+	unsigned long int index;
 
 	if (ht == NULL || ht->array == NULL || ht->size == 0)
 		return;
-	for (i = 0; i < ht->size; i++)
+
+	for (index = 0; index < ht->size; index++)
 	{
-		while (ht->array[i] != NULL)
+		while (ht->array[index] != NULL)
 		{
-			next = ht->array[i]->next;
-			free(ht->array[i]->key);
-			free(ht->array[i]->value);
-			free(ht->array[i]);
-			ht->array[i] = next;
+			tmp = ht->array[index]->next;
+			free(ht->array[index]->key);
+			free(ht->array[index]->value);
+			free(ht->array[index]);
+			ht->array[index] = tmp;
 		}
+
 	}
 	free(ht->array);
-	ht->array = NULL;
-	ht->shead = ht->stail = NULL;
-	ht->size = 0;
 	free(ht);
 }
