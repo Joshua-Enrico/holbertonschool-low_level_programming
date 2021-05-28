@@ -109,34 +109,36 @@ shash_node_t *shash_node_maker(const char *key, const char *value)
  *
  * Return: void
  */
-void add_sorted_list(shash_table_t *table, shash_node_t *node)
+void add_sorted_list(shash_table_t *ht, shash_node_t *hn)
 {
 	shash_node_t *tmp;
 
-	if (table->shead == NULL && table->stail == NULL)
+	if (ht->shead == NULL && ht->stail == NULL)
 	{
-		table->shead = table->stail = node;
+		ht->shead = hn;
+		ht->stail = hn;
 		return;
 	}
-	tmp = table->shead;
+	tmp = ht->shead;
 	while (tmp != NULL)
 	{
-		if (strcmp(node->key, tmp->key) < 0)
+		if (strcmp(hn->key, tmp->key) < 0)
 		{
-			node->snext = tmp;
-			node->sprev = tmp->sprev;
-			tmp->sprev = node;
-			if (node->sprev != NULL)
-				node->sprev->snext = node;
+			hn->snext = tmp;
+			hn->sprev = tmp->sprev;
+			tmp->sprev = hn;
+			if (hn->sprev != NULL)
+				hn->sprev->snext = hn;
 			else
-				table->shead = node;
+				ht->shead = hn;
 			return;
 		}
 		tmp = tmp->snext;
 	}
-	node->sprev = table->stail;
-	table->stail->snext = node;
-	table->stail = node;
+
+	hn->sprev = ht->stail;
+	ht->stail->snext = hn;
+	ht->stail = hn;
 }
 /**
  * shash_table_get - retrieves a value associated with a key
