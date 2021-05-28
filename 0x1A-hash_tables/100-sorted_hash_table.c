@@ -6,26 +6,26 @@
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *sht = malloc(sizeof(shash_table_t));
+	shash_table_t *ht = malloc(sizeof(shash_table_t));
 	unsigned long int index = 0;
 
-	if (sht == NULL)
+	if (ht == NULL)
 		return (NULL);
-	sht->size = size;
-	sht->array = malloc(sizeof(shash_node_t) * size);
+	ht->size = size;
+	ht->shead = NULL;
+	ht->stail = NULL;
+	ht->array = malloc(sizeof(shash_node_t) * size);
 	/* another assigment: size * sizeof (hash_node_t *) * size*/
-	sht->shead = NULL;
-	sht->stail = NULL;
-	if (sht->array == NULL)
+	if (ht->array == NULL)
 	{
-		free(sht);
+		free(ht);
 		return (NULL);
 	}
 	for (index = 0; index < size; index++)
 	{
-		sht->array[index] = NULL;
+		ht->array[index] = NULL;
 	}
-	return (sht);
+	return (ht);
 }
 /**
  * shash_table_set - creates a new hash node
