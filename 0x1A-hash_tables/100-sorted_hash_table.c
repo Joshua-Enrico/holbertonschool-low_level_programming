@@ -6,26 +6,26 @@
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *sht;
-	unsigned long int i;
+	shash_table_t *ht = malloc(sizeof(shash_table_t));
+	unsigned long int index = 0;
 
-	sht = malloc(sizeof(shash_table_t));
-	if (sht == NULL)
+	if (ht == NULL)
 		return (NULL);
-	sht->size = size;
-	sht->shead = NULL;
-	sht->stail = NULL;
-	sht->array = malloc(sizeof(shash_node_t) * size);
-	if (sht->array == NULL)
+	ht->size = size;
+	ht->shead = NULL;
+	ht->stail = NULL;
+	ht->array = malloc(sizeof(shash_node_t) * size);
+	/* another assigment: size * sizeof (hash_node_t *) * size*/
+	if (ht->array == NULL)
 	{
-		free(sht);
+		free(ht);
 		return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	for (index = 0; index < size; index++)
 	{
-		sht->array[i] = NULL;
+		ht->array[index] = NULL;
 	}
-	return (sht);
+	return (ht);
 }
 /**
  * shash_table_set - creates a new hash node
@@ -109,36 +109,34 @@ shash_node_t *shash_node_maker(const char *key, const char *value)
  *
  * Return: void
  */
-void add_sorted_list(shash_table_t *ht, shash_node_t *hn)
+void add_sorted_list(shash_table_t *table, shash_node_t *node)
 {
 	shash_node_t *tmp;
 
-	if (ht->shead == NULL && ht->stail == NULL)
+	if (table->shead == NULL && table->stail == NULL)
 	{
-		ht->shead = hn;
-		ht->stail = hn;
+		table->shead = table->stail = node;
 		return;
 	}
-	tmp = ht->shead;
+	tmp = table->shead;
 	while (tmp != NULL)
 	{
-		if (strcmp(hn->key, tmp->key) < 0)
+		if (strcmp(node->key, tmp->key) < 0)
 		{
-			hn->snext = tmp;
-			hn->sprev = tmp->sprev;
-			tmp->sprev = hn;
-			if (hn->sprev != NULL)
-				hn->sprev->next = hn;
+			node->snext = tmp;
+			node->sprev = tmp->sprev;
+			tmp->sprev = node;
+			if (node->sprev != NULL)
+				node->sprev->snext = node;
 			else
-				ht->shead = hn;
+				table->shead = node;
 			return;
 		}
 		tmp = tmp->snext;
 	}
-
-	hn->sprev = ht->stail;
-	ht->stail->snext = hn;
-	ht->stail = hn;
+	node->sprev = table->stail;
+	table->stail->snext = node;
+	table->stail = node;
 }
 /**
  * shash_table_get - retrieves a value associated with a key
