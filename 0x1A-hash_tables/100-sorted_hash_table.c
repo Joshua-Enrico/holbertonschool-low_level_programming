@@ -133,7 +133,7 @@ void add_sorted_list(shash_table_t *ht, shash_node_t *hn)
 				ht->shead = hn;
 			return;
 		}
-		tmp = tmp->next;
+		tmp = tmp->snext;
 	}
 
 	hn->sprev = ht->stail;
