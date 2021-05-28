@@ -9,12 +9,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *ht = malloc(sizeof(hash_table_t));
 	unsigned long int index;
 
-	if (ht == NULL || ht->size == 0)
+	if (ht == NULL)
 		return (NULL);
 
 	ht->size = size;
 	ht->array = malloc(sizeof(hash_node_t *) * size);
-	/* another assigment: size * sizeof (hash_node_t *) * size*/
 	if (ht->array == NULL)
 	{
 		free(ht);
