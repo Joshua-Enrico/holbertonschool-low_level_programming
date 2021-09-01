@@ -10,7 +10,7 @@
 
 void op_c(va_list op_d)
 {
-printf("%c", va_arg(op_d, int));
+    printf("%c", va_arg(op_d, int));
 }
 
 /**
@@ -22,7 +22,7 @@ printf("%c", va_arg(op_d, int));
 
 void op_i(va_list op_d)
 {
-printf("%d", va_arg(op_d, int));
+    printf("%d", va_arg(op_d, int));
 }
 /**
  * op_f - Entry Point
@@ -32,7 +32,7 @@ printf("%d", va_arg(op_d, int));
  */
 void op_f(va_list op_d)
 {
-printf("%f", va_arg(op_d, double));
+    printf("%f", va_arg(op_d, double));
 }
 
 /**
@@ -43,15 +43,14 @@ printf("%f", va_arg(op_d, double));
  */
 void op_z(va_list op_d)
 {
-char *s = va_arg(op_d, char*);
+    char *s = va_arg(op_d, char *);
 
-if (s == NULL)
-{
-printf("(nil)");
-return;
-}
-printf("%s", s);
-
+    if (s == NULL)
+    {
+        printf("(nil)");
+        return;
+    }
+    printf("%s", s);
 }
 /**
  * print_all - Prints all
@@ -60,38 +59,37 @@ printf("%s", s);
  * Return: Return strings sum
  */
 
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
-op_t op_s[] = {
-{"c", op_c},
-{"i", op_i},
-{"f", op_f},
-{"s", op_z},
-{NULL, NULL},
+    op_t op_s[] = {
+        {"c", op_c},
+        {"i", op_i},
+        {"f", op_f},
+        {"s", op_z},
+        {NULL, NULL},
 
-};
+    };
 
-unsigned int i = 0, j = 0;
-char *x = "";
-va_list opp;
-va_start(opp, format);
+    unsigned int i = 0, j = 0;
+    char *x = "";
+    va_list opp;
+    va_start(opp, format);
 
-
-while (format != NULL && format[i] != '\0')
-{
-j = 0;
-while (op_s[j].op != NULL)
-{
-if (format[i] == op_s[j].op[0])
-{
-printf("%s", x);
-op_s[j].stargate(opp);
-x = ", ";
-}
-j++;
-}
-i++;
-}
-printf("\n");
-va_end(opp);
+    while (format != NULL && format[i] != '\0')
+    {
+        j = 0;
+        while (op_s[j].op != NULL)
+        {
+            if (format[i] == op_s[j].op[0])
+            {
+                printf("%s", x);
+                op_s[j].stargate(opp);
+                x = ", ";
+            }
+            j++;
+        }
+        i++;
+    }
+    printf("\n");
+    va_end(opp);
 }
