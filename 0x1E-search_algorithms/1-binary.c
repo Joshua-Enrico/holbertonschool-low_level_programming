@@ -1,24 +1,25 @@
 #include "search_algos.h"
 
 /**
- * print_array - .
- * @array: .
- * @size: .
- *
- * return: void
+ * printer - Prints an array
+ * @array: Target array
+ * @left: Left index of @array
+ * @right: Right index of @array
  */
-void print_array(int *array, size_t size)
+void printer(int *array, size_t left, size_t right)
 {
 	size_t i;
 
-	printf("Searching in array:");
-	for (i = 0; i < size; i++)
+	printf("Searching in array: ");
+
+	for (i = left; i <= right; i++)
 	{
-		printf(" %d", array[i]);
-		if (i != size - 1)
-			printf(",");
+		printf("%d", array[i]);
+		if (i == right)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	printf("\n");
 }
 
 /**
@@ -32,24 +33,32 @@ void print_array(int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t l, m, r;
+	size_t right;
+	size_t left;
+	size_t mid;
 
-	if (array != NULL && size > 0)
+	if (!array || size == 0)
+		return (-1);
+
+	left = 0;
+	right = size - 1;
+	mid = (left + right) / 2;
+	while (1)
 	{
-		l = 0;
-		r = size - 1;
-		print_array(array + l, r + 1 - l);
-		while (l < r)
-		{
-			m = (l + r) / 2;
-			if (array[m] < value)
-				l = m + 1;
-			else if (array[m] > value)
-				r = m;
-			else
-				return (m);
-			print_array(array + l, r + 1 - l);
-		}
+		printer(array, left, right);
+
+		if (array[mid] == value)
+			return (mid);
+		if (mid == 0 || mid == size - 1)
+			return (-1);
+
+		if (array[mid] > value)
+			right = mid - 1;
+		else
+			left = mid + 1;
+
+		mid = (right + left) / 2;
 	}
+
 	return (-1);
 }
